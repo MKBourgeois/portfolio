@@ -4,26 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Michael Bourgeois — AI April 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --ink:#0e0e0e;--ink-2:#3a3a3a;--ink-3:#6b6b6b;
   --paper:#f7f5f0;--paper-2:#edeae3;--rule:#d0ccc4;
   --accent:#c8392b;--accent-2:#1a3a5c;--accent-3:#e8a020;--white:#ffffff;
 }
-body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);margin:0}
 .masthead{background:var(--ink);color:var(--white);border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
-.masthead-bg{position:absolute;top:0;right:0;width:340px;height:100%;background:url('https://raw.githubusercontent.com/MKBourgeois/portfolio/main/mkb-copilot%20challenge.png') center top/cover no-repeat;opacity:0.18;mask-image:linear-gradient(to left,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0) 100%);-webkit-mask-image:linear-gradient(to left,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0) 100%)}
+.masthead-bg{position:absolute;top:0;right:0;width:340px;height:100%;background:url('https://raw.githubusercontent.com/MKBourgeois/portfolio/main/mkb-copilot%20challenge.png') center top/cover no-repeat;opacity:.18;mask-image:linear-gradient(to left,rgba(0,0,0,.9),rgba(0,0,0,0));-webkit-mask-image:linear-gradient(to left,rgba(0,0,0,.9),rgba(0,0,0,0))}
 .masthead-inner{max-width:1100px;margin:0 auto;padding:48px 40px 40px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:32px;position:relative;z-index:1}
 .masthead-overline{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
 .masthead-name{font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,72px);font-weight:900;line-height:.95;letter-spacing:-.02em;color:var(--white);margin-bottom:8px}
-.masthead-title{font-size:14px;color:rgba(255,255,255,.55);font-weight:300;letter-spacing:.04em}
-.masthead-cert{font-size:11px;color:rgba(255,255,255,.35);font-weight:300;letter-spacing:.02em;margin-top:6px}
+.masthead-title{font-size:14px;color:rgba(255,255,255,.55);font-weight:300;letter-spacing:.04em;margin-bottom:12px}
+.masthead-thesis{font-size:13px;color:rgba(255,255,255,.75);font-weight:400;line-height:1.55;border-left:2px solid var(--accent);padding-left:14px;margin-top:10px;font-style:italic}
+.masthead-cert{font-size:11px;color:rgba(255,255,255,.3);font-weight:300;margin-top:10px}
 .masthead-meta{text-align:right}
 .masthead-month{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px;font-family:'Playfair Display',serif}
 .masthead-issue{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:rgba(255,255,255,.12);line-height:1}
-.ticker{background:var(--accent);padding:8px 40px;font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--white);display:flex;gap:40px;flex-wrap:wrap;position:relative;z-index:1}
+.ticker{background:var(--accent);padding:10px 40px;font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--white);display:flex;gap:28px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1}
 .ticker span::before{content:"★  "}
 .main{max-width:1100px;margin:0 auto;padding:48px 40px 80px}
 .section-rule{display:flex;align-items:center;gap:16px;margin-bottom:32px;margin-top:56px}
@@ -32,7 +34,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
 .section-rule-line{flex:1;height:1px;background:var(--rule)}
 .hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:2px;margin-bottom:2px}
 .hero-card{background:var(--white);padding:36px;position:relative;overflow:hidden}
-.hero-card.featured{background:var(--accent-2);color:var(--white)}
+.hero-card.featured{background:var(--accent-2)}
 .card-tag{display:inline-block;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;background:var(--accent);color:var(--white);padding:4px 10px;margin-bottom:16px}
 .card-tag.won{background:var(--accent-3);color:var(--ink)}
 .card-tag.pending{background:transparent;border:1px solid var(--accent-3);color:var(--accent-3)}
@@ -40,7 +42,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
 .hero-card.featured .card-headline{color:var(--white)}
 .card-deck{font-size:14px;line-height:1.65;color:var(--ink-2);margin-bottom:20px}
 .hero-card.featured .card-deck{color:rgba(255,255,255,.75)}
-.card-link{font-size:12px;font-weight:500;letter-spacing:.08em;text-decoration:none;color:var(--accent);border-bottom:1px solid currentColor;padding-bottom:1px}
+.card-link{font-size:12px;font-weight:500;text-decoration:none;color:var(--accent);border-bottom:1px solid currentColor;padding-bottom:1px}
 .hero-card.featured .card-link{color:var(--accent-3)}
 .card-number{position:absolute;bottom:24px;right:28px;font-family:'Playfair Display',serif;font-size:72px;font-weight:900;color:rgba(0,0,0,.05);line-height:1;pointer-events:none}
 .hero-card.featured .card-number{color:rgba(255,255,255,.06)}
@@ -48,53 +50,64 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
 .stat-box{flex:1;background:var(--white);padding:24px 20px;text-align:center}
 .stat-box.dark{background:var(--accent-2)}.stat-box.red{background:var(--accent)}.stat-box.amber{background:var(--accent-3)}
 .stat-num{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;line-height:1;margin-bottom:4px}
-.stat-box.dark .stat-num{color:var(--white)}.stat-box.red .stat-num{color:var(--white)}.stat-box.amber .stat-num{color:var(--ink)}
+.stat-box.dark .stat-num,.stat-box.red .stat-num{color:var(--white)}
+.stat-box.amber .stat-num{color:var(--ink)}
 .stat-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
 .stat-box.dark .stat-label{color:rgba(255,255,255,.55)}.stat-box.red .stat-label{color:rgba(255,255,255,.7)}.stat-box.amber .stat-label{color:rgba(0,0,0,.5)}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-bottom:2px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px}
 .standard-card{background:var(--white);padding:28px;position:relative;overflow:hidden}
 .standard-card.dark-card{background:var(--ink)}
 .standard-card.muted-card{background:var(--paper-2)}
 .week-label{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
 .tools-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
 .tool-pill{font-size:10px;font-weight:500;letter-spacing:.08em;padding:4px 10px;border:1px solid var(--rule);color:var(--ink-2);background:var(--white);cursor:default;transition:background .15s,color .15s}
-.download-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;letter-spacing:.06em;text-decoration:none;color:var(--ink-2);border:1px solid var(--rule);padding:5px 12px;margin-top:12px;margin-right:6px;transition:background .15s,color .15s}
+.tool-pill:hover{background:var(--ink);color:var(--white)}
+.download-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;text-decoration:none;color:var(--ink-2);border:1px solid var(--rule);padding:5px 12px;margin-top:12px;margin-right:6px;transition:background .15s,color .15s}
 .download-link:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
-.download-link-light{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.25)}
-.download-link-light:hover{background:rgba(255,255,255,.15);color:var(--white)}
-.portrait-card{position:relative;min-height:320px;overflow:hidden;background:var(--ink)}
-.portrait-card img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;opacity:0.92}
-.portrait-overlay{position:absolute;bottom:0;left:0;right:0;padding:24px 28px;background:linear-gradient(to top,rgba(14,14,14,0.92) 0%,rgba(14,14,14,0) 100%)}
+.download-link.light{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.25)}
+.download-link.light:hover{background:rgba(255,255,255,.15);color:var(--white)}
+.portrait-card{position:relative;min-height:210px;max-height:240px;overflow:hidden;background:var(--ink)}
+.portrait-card img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;opacity:.88}
+.portrait-overlay{position:absolute;bottom:0;left:0;right:0;padding:20px 28px;background:linear-gradient(to top,rgba(14,14,14,.95),rgba(14,14,14,0))}
 .portrait-overlay .week-label{color:rgba(255,255,255,.5)}
-.portrait-overlay .card-headline{font-size:20px;color:var(--white);margin-bottom:6px}
+.portrait-overlay .card-headline{font-size:20px;color:var(--white);margin-bottom:4px}
 .portrait-overlay .card-deck{font-size:12px;color:rgba(255,255,255,.6);margin-bottom:0}
-.portrait-styles{display:flex;gap:6px;margin-top:10px}
+.portrait-styles{display:flex;gap:6px;margin-top:8px}
 .portrait-style-tag{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.6)}
-.pullquote{background:var(--ink);padding:36px;color:var(--white)}
+.pullquote{background:var(--ink);padding:36px 40px;color:var(--white)}
 .pullquote-text{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;font-style:italic;line-height:1.45;color:var(--white);margin-bottom:16px}
 .pullquote-attr{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.cert-section-header{background:var(--accent-2);padding:44px 40px;margin-bottom:2px}
+.cert-section-overline{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-3);margin-bottom:14px}
+.cert-section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3.8vw,42px);font-weight:900;line-height:1.1;color:var(--white);margin-bottom:10px;letter-spacing:-.01em}
+.cert-section-subtitle{font-size:14px;color:rgba(255,255,255,.5);font-weight:300}
+.cert-thesis{background:rgba(255,255,255,.06);border-left:3px solid var(--accent-3);padding:16px 20px;margin-top:20px}
+.cert-thesis-text{font-size:13px;color:rgba(255,255,255,.75);line-height:1.65;font-style:italic}
 .cert-context{background:var(--white);padding:32px 36px;margin-bottom:2px;border-left:4px solid var(--accent-2)}
 .cert-context-headline{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;margin-bottom:12px;color:var(--accent-2)}
 .cert-context-body{font-size:14px;line-height:1.75;color:var(--ink-2)}
 .cert-context-body p{margin-bottom:10px}
 .cert-context-body p:last-child{margin-bottom:0}
 .capstone-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px}
-.capstone-card{background:var(--accent-2);padding:32px;color:var(--white);position:relative;overflow:hidden}
+.capstone-card{padding:32px;color:var(--white);position:relative;overflow:hidden}
+.capstone-card.first{background:#0f2540}
 .capstone-card.second{background:var(--ink)}
 .capstone-label{font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-3);margin-bottom:12px}
 .capstone-headline{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;line-height:1.2;color:var(--white);margin-bottom:10px}
 .capstone-deck{font-size:13px;line-height:1.6;color:rgba(255,255,255,.7);margin-bottom:16px}
-.capstone-result{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.capstone-result-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--accent-3)}
+.capstone-result{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.capstone-result-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:var(--accent-3)}
 .capstone-result-label{font-size:11px;color:rgba(255,255,255,.5);line-height:1.4}
-.capstone-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}
+.capstone-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .capstone-metric{background:rgba(255,255,255,.08);padding:10px 12px}
 .capstone-metric-val{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--white)}
-.capstone-metric-label{font-size:10px;color:rgba(255,255,255,.45);margin-top:2px;letter-spacing:.05em}
-.capstone-bg-num{position:absolute;bottom:-10px;right:20px;font-family:'Playfair Display',serif;font-size:100px;font-weight:900;color:rgba(255,255,255,.04);line-height:1;pointer-events:none}
+.capstone-metric-label{font-size:10px;color:rgba(255,255,255,.45);margin-top:2px}
+.capstone-bg-num{position:absolute;bottom:-10px;right:20px;font-family:'Playfair Display',serif;font-size:110px;font-weight:900;color:rgba(255,255,255,.04);line-height:1;pointer-events:none}
 .course-section{margin-bottom:2px}
-.course-header{background:var(--accent-2);padding:20px 28px}
-.course-header.c2{background:var(--ink)}.course-header.c3{background:var(--accent)}
+.course-header{padding:20px 28px}
+.course-header.c1{background:var(--accent-2)}
+.course-header.c2{background:var(--ink)}
+.course-header.c3{background:var(--accent)}
 .course-header-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .course-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--white)}
 .course-status{font-size:10px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5)}
@@ -106,9 +119,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
 .project-card.inprogress{border-top:3px solid var(--accent);background:var(--paper-2);opacity:.85}
 .proj-num{font-size:10px;font-weight:500;letter-spacing:.1em;color:var(--ink-3);margin-bottom:6px}
 .proj-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;line-height:1.3;margin-bottom:6px;color:var(--ink)}
-.proj-desc{font-size:11px;line-height:1.55;color:var(--ink-3);margin-bottom:6px}
+.proj-desc{font-size:11px;line-height:1.55;color:var(--ink-3);margin-bottom:4px}
 .proj-result{font-size:10px;font-weight:500;color:var(--accent-2);margin-top:4px}
-.proj-tech{font-size:9px;letter-spacing:.08em;color:var(--ink-3);margin-top:6px;padding-top:6px;border-top:1px solid var(--rule)}
+.proj-tech{font-size:9px;letter-spacing:.06em;color:var(--ink-3);margin-top:6px;padding-top:6px;border-top:1px solid var(--rule)}
 .proj-badge{display:inline-block;font-size:8px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;margin-top:8px}
 .proj-badge.cap{background:var(--accent-3);color:var(--ink)}
 .proj-badge.prog{background:var(--accent);color:var(--white)}
@@ -118,21 +131,23 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
 .inprogress-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:8px}
 .inprogress-desc{font-size:13px;line-height:1.6;color:var(--ink-2)}
 .week4-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:2px}
-.week4-card{background:var(--white);padding:20px;text-align:center}
+.week4-card{background:var(--white);padding:22px 18px;text-align:center}
 .week4-card.done{background:var(--accent-2)}
 .week4-card.mandatory{background:var(--accent)}
 .week4-day{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
 .week4-card.done .week4-day,.week4-card.mandatory .week4-day{color:rgba(255,255,255,.5)}
 .week4-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px}
 .week4-card.done .week4-title,.week4-card.mandatory .week4-title{color:var(--white)}
-.week4-check{font-size:18px;margin-bottom:6px}
+.week4-check{font-size:20px;margin-bottom:6px}
 .week4-note{font-size:10px;color:var(--ink-3);line-height:1.4}
 .week4-card.done .week4-note,.week4-card.mandatory .week4-note{color:rgba(255,255,255,.55)}
+.week4-note a{color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.3);text-decoration:none}
 .footer{background:var(--ink);color:var(--white);padding:32px 40px;display:flex;justify-content:space-between;align-items:center;border-top:3px solid var(--accent)}
 .footer-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700}
 .footer-meta{font-size:11px;color:rgba(255,255,255,.4);margin-top:4px}
 .footer-links{display:flex;gap:24px}
 .footer-link{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none}
+.footer-link:hover{color:var(--white)}
 @media(max-width:768px){
   .masthead-inner{grid-template-columns:1fr;padding:32px 20px 28px}
   .masthead-meta,.masthead-bg{display:none}
@@ -142,9 +157,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
   .stat-row{flex-wrap:wrap}
   .main{padding:32px 20px 60px}
   .footer{flex-direction:column;gap:16px;align-items:flex-start;padding:28px 20px}
-  .ticker{padding:8px 20px;gap:16px}
+  .ticker{padding:8px 20px;gap:14px}
   .inprogress-callout{flex-direction:column;gap:16px}
-  .portrait-card{min-height:240px}
+  .portrait-card{min-height:180px;max-height:200px}
+  .cert-section-header{padding:32px 20px}
 }
 </style>
 </head>
@@ -154,9 +170,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
   <div class="masthead-bg"></div>
   <div class="masthead-inner">
     <div>
-      <div class="masthead-overline">AI April 2026 &nbsp;·&nbsp; Equinix GTM Enablement &nbsp;·&nbsp; Certification Path</div>
+      <div class="masthead-overline">AI April 2026 &nbsp;·&nbsp; Equinix GTM Enablement</div>
       <div class="masthead-name">Michael<br>Bourgeois</div>
       <div class="masthead-title">Instructional Design Manager, Sales &amp; Partner Enablement</div>
+      <div class="masthead-thesis">Applied AI in practice — rapid prototyping through AI April, technical depth through formal certification.</div>
       <div class="masthead-cert">University of Texas at Austin McCombs School of Business &nbsp;·&nbsp; Post Graduate Program in Generative AI for Business Applications</div>
     </div>
     <div class="masthead-meta">
@@ -166,7 +183,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
   </div>
   <div class="ticker">
     <span>Won Week 2 Mandatory Challenge</span>
-    <span>22 AI Projects Completed</span>
+    <span>13 Challenges Completed</span>
+    <span>22 Certification Projects</span>
     <span>UT at Austin McCombs Certification</span>
   </div>
 </header>
@@ -179,33 +197,28 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
     <div class="hero-card featured">
       <div class="card-tag pending">Judging Pending &nbsp;·&nbsp; Week 3 Mandatory</div>
       <div class="card-headline">From Order-Taker<br>to Trusted Advisor</div>
-      <div class="card-deck">A fully deployed AI-powered sales simulation built in a single day. Partners roleplay a live discovery call with Dr. Rachel Kim — an AI customer who responds dynamically, shifts mood based on question quality, and conceals a hidden need that must be earned. No multiple choice. No scripted branches. Real practice that transfers.</div>
-      <a class="card-link" href="https://partner-simulator.netlify.app/" target="_blank">Launch simulation →</a>
-      <br>
-      <a class="download-link download-link-light" href="https://raw.githubusercontent.com/MKBourgeois/portfolio/6d2a6d495cbe70bc09b331e130e10a38622790c6/executive-summary.pdf" target="_blank">↓ Executive Summary</a>
-      <a class="download-link download-link-light" href="https://raw.githubusercontent.com/MKBourgeois/portfolio/6d2a6d495cbe70bc09b331e130e10a38622790c6/discovery-cheatsheet.docx" target="_blank">↓ Discovery Cheat Sheet</a>
+      <div class="card-deck">Partners complete training knowing the content — but still struggle with great discovery conversations. This AI-powered simulation puts them in a live roleplay with Dr. Rachel Kim, a dynamic AI customer who shifts mood based on question quality and conceals a hidden business need that must be earned. No scripts. No multiple choice. Practice that actually transfers to the field.</div>
+      <a class="card-link" href="https://partner-simulator.netlify.app/" target="_blank">Launch simulation →</a><br>
+      <a class="download-link light" href="https://raw.githubusercontent.com/MKBourgeois/portfolio/6d2a6d495cbe70bc09b331e130e10a38622790c6/executive-summary.pdf" target="_blank">↓ Executive Summary</a>
+      <a class="download-link light" href="https://raw.githubusercontent.com/MKBourgeois/portfolio/6d2a6d495cbe70bc09b331e130e10a38622790c6/discovery-cheatsheet.docx" target="_blank">↓ Discovery Cheat Sheet</a>
       <div class="card-number">01</div>
     </div>
     <div class="hero-card" style="display:flex;flex-direction:column;justify-content:space-between;">
       <div>
         <div class="card-tag won">🏆 Won &nbsp;·&nbsp; Week 2 Mandatory</div>
         <div class="card-headline">Partner Enablement Program Dashboard</div>
-        <div class="card-deck">A live Streamlit dashboard tracking engagement, completion, certification, and CSAT across regions — polished enough to present to leadership.</div>
+        <div class="card-deck">Leadership needs a single view of program health — engagement, completion, certification rates, and CSAT across regions. This live Streamlit dashboard delivers it, updated in real time and polished enough to present directly to senior stakeholders.</div>
         <a class="card-link" href="https://teamdashboard-415.streamlit.app/" target="_blank">View dashboard →</a>
       </div>
-      <div class="tools-row">
-        <span class="tool-pill">ChatGPT</span>
-        <span class="tool-pill">Streamlit</span>
-        <span class="tool-pill">GitHub</span>
-      </div>
+      <div class="tools-row"><span class="tool-pill">ChatGPT</span><span class="tool-pill">Streamlit</span><span class="tool-pill">GitHub</span></div>
       <div class="card-number">02</div>
     </div>
   </div>
 
   <div class="stat-row" style="margin-top:2px;">
     <div class="stat-box dark"><div class="stat-num">5</div><div class="stat-label">Weeks of Challenges</div></div>
-    <div class="stat-box red"><div class="stat-num">1</div><div class="stat-label">Mandatory Wins</div></div>
-    <div class="stat-box"><div class="stat-num">9</div><div class="stat-label">AI April Artifacts</div></div>
+    <div class="stat-box red"><div class="stat-num">1</div><div class="stat-label">Weekly Challenge Win</div></div>
+    <div class="stat-box"><div class="stat-num">9</div><div class="stat-label">AI April Builds</div></div>
     <div class="stat-box amber"><div class="stat-num">22</div><div class="stat-label">Certification Projects</div></div>
   </div>
 
@@ -217,7 +230,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
       <div class="portrait-overlay">
         <div class="week-label">Week 1 &nbsp;·&nbsp; Optional &nbsp;·&nbsp; Copilot Designer</div>
         <div class="card-headline">Triple Style Portrait</div>
-        <div class="card-deck">One prompt, three artistic identities — the same description rendered in three wildly different styles.</div>
+        <div class="card-deck">One prompt, three artistic identities — watercolor, cyberpunk neon, and Renaissance oil painting.</div>
         <div class="portrait-styles">
           <span class="portrait-style-tag">Watercolor</span>
           <span class="portrait-style-tag">Cyberpunk Neon</span>
@@ -230,15 +243,15 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
   <div class="grid-2" style="margin-bottom:2px;">
     <div class="standard-card">
       <div class="week-label">Week 1 &nbsp;·&nbsp; Mandatory ✓</div>
-      <div class="card-headline" style="font-size:18px;">AI Strategy Deck</div>
-      <div class="card-deck" style="font-size:13px;">An executive briefing on AI-powered partner enablement for Equinix — current state, opportunity, 3 tools, roadmap, risks, and success metrics. Built with ChatGPT for content strategy and Gamma for presentation design.</div>
+      <div class="card-headline" style="font-size:20px;">AI Strategy Deck</div>
+      <div class="card-deck" style="font-size:13px;">Equinix's partner enablement content takes weeks to produce and arrives inconsistently across regions. This executive briefing makes the case for AI-powered content development — covering the opportunity, three specific tools, a phased roadmap, and the risks worth managing.</div>
       <a class="download-link" href="https://raw.githubusercontent.com/MKBourgeois/portfolio/6d2a6d495cbe70bc09b331e130e10a38622790c6/AI-Strategy-for-Scalable-Partner-Enablement.pptx" target="_blank">↓ Download Deck</a>
       <div class="tools-row"><span class="tool-pill">ChatGPT</span><span class="tool-pill">Gamma</span></div>
     </div>
     <div class="standard-card muted-card">
       <div class="week-label">Week 2 &nbsp;·&nbsp; Optional</div>
-      <div class="card-headline" style="font-size:18px;">Sparring Session</div>
-      <div class="card-deck" style="font-size:13px;">Pitched the AI Partner Enablement Engine. AI pushed the concept from separate tools to a single scalable platform — a direct precursor to the simulation.</div>
+      <div class="card-headline" style="font-size:20px;">Sparring Session</div>
+      <div class="card-deck" style="font-size:13px;">The challenge: pitch an AI-powered app and defend it against an AI that pushes back. The result: a cleaner, more scalable vision for an AI Partner Enablement Engine — one platform instead of separate tools — and a direct precursor to the simulation.</div>
       <div class="tools-row"><span class="tool-pill">Claude</span><span class="tool-pill">ChatGPT</span></div>
     </div>
   </div>
@@ -247,14 +260,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
     <div class="standard-card">
       <div class="week-label">Week 2 &nbsp;·&nbsp; Optional</div>
       <div class="card-headline" style="font-size:20px;">Artemis II: Journey Around the Moon</div>
-      <div class="card-deck" style="font-size:13px;">Interactive educational experience for 7–10 year olds. Personalized by name, 4-step mission journey, 5-badge progression system, embedded quiz, and personalized completion certificate.</div>
+      <div class="card-deck" style="font-size:13px;">How do you explain a real space mission to a 7-year-old in a way that holds their attention? This interactive experience walks kids through the Artemis II mission step by step — personalized by name, with badges earned at each stage, expandable facts, and a personalized completion certificate.</div>
       <a class="card-link" href="https://fastidious-dolphin-eeaefa.netlify.app/" target="_blank">Launch experience →</a>
       <div class="tools-row"><span class="tool-pill">Claude</span><span class="tool-pill">ChatGPT</span><span class="tool-pill">Netlify</span></div>
     </div>
     <div class="standard-card dark-card">
       <div class="week-label" style="color:rgba(255,255,255,.4);">Week 2 &nbsp;·&nbsp; Bonus</div>
       <div class="card-headline" style="font-size:20px;color:white;">Artemis II: Moon Mission!</div>
-      <div class="card-deck" style="font-size:13px;color:rgba(255,255,255,.65);">A fully playable arcade game built from a two-sentence prompt. Pilot the Orion spacecraft, dodge asteroids, collect moon rocks. Lives, score, distance, and persistent high-score leaderboard.</div>
+      <div class="card-deck" style="font-size:13px;color:rgba(255,255,255,.65);">Built to give kids something to play after they learn. A fully functional arcade game — pilot the Orion spacecraft, dodge asteroids, collect moon rocks — with a persistent high-score leaderboard. Built from a two-sentence prompt.</div>
       <a class="card-link" style="color:#e8a020;border-color:#e8a020;" href="https://roaring-babka-f88861.netlify.app/" target="_blank">Play the game →</a>
       <div class="tools-row">
         <span class="tool-pill" style="border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.6);background:transparent;">Claude</span>
@@ -267,14 +280,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
     <div class="standard-card muted-card">
       <div class="week-label">Week 2 &nbsp;·&nbsp; Optional</div>
       <div class="card-headline" style="font-size:20px;">PULSE PAD Beat Studio</div>
-      <div class="card-deck" style="font-size:13px;">A fully functional 8-pad drum machine in a single HTML file. Real synthesized sound via the Web Audio API. Record, playback, and clear sequences.</div>
+      <div class="card-deck" style="font-size:13px;">A working 8-pad drum machine that runs entirely in a browser tab — no downloads, no plugins. Kick, snare, clap, hi-hat, tom, crash, cowbell, and FX pads with real synthesized audio, a record/playback system, and a live visualizer.</div>
       <a class="card-link" href="https://reliable-cassata-1d012c.netlify.app/" target="_blank">Open beat studio →</a>
       <div class="tools-row"><span class="tool-pill">Claude</span><span class="tool-pill">ChatGPT</span><span class="tool-pill">Netlify</span></div>
     </div>
     <div class="standard-card">
       <div class="week-label">Week 3 &nbsp;·&nbsp; Optional</div>
       <div class="card-headline" style="font-size:20px;">Make the Data Real</div>
-      <div class="card-deck" style="font-size:13px;">108-row synthetic partner enablement dataset — 3 regions, 3 partner types, 12 months of KPI data. The dataset that powers the live dashboard.</div>
+      <div class="card-deck" style="font-size:13px;">Before a dashboard means anything, the data behind it needs to tell a coherent story. This 108-row synthetic partner enablement dataset — covering 3 regions, 3 partner types, and 12 months of KPI trends — is the foundation the live dashboard runs on.</div>
       <div class="card-deck" style="font-size:12px;font-style:italic;color:var(--ink-3);margin-top:8px;">"After a slower Q1 launch, global momentum strengthened through Q3, with AMER leading early and APAC gaining late."</div>
       <div class="tools-row"><span class="tool-pill">ChatGPT</span></div>
     </div>
@@ -283,36 +296,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
   <div class="section-rule"><span class="section-rule-label">Week 4 &nbsp;·&nbsp; Host It, Show It, Own It</span><div class="section-rule-line"></div></div>
 
   <div class="week4-grid">
-    <div class="week4-card done">
-      <div class="week4-day">Mon &nbsp;·&nbsp; Optional</div>
-      <div class="week4-check">✓</div>
-      <div class="week4-title">Learn GitHub</div>
-      <div class="week4-note">Repositories, commits, push and pull — foundations in place by Week 2</div>
-    </div>
-    <div class="week4-card done">
-      <div class="week4-day">Tue &nbsp;·&nbsp; Optional</div>
-      <div class="week4-check">✓</div>
-      <div class="week4-title">Learn GitHub Pages</div>
-      <div class="week4-note">Static site hosting via GitHub Pages — live by Week 2</div>
-    </div>
-    <div class="week4-card done">
-      <div class="week4-day">Wed &nbsp;·&nbsp; Optional</div>
-      <div class="week4-check">✓</div>
-      <div class="week4-title">Set Up Your GitHub</div>
-      <div class="week4-note">Public repo live at github.com/MKBourgeois/portfolio</div>
-    </div>
-    <div class="week4-card done">
-      <div class="week4-day">Thu &nbsp;·&nbsp; Optional</div>
-      <div class="week4-check">✓</div>
-      <div class="week4-title">Go Live</div>
-      <div class="week4-note"><a href="https://teamdashboard-415.streamlit.app/" target="_blank" style="color:rgba(255,255,255,.75);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);">Live dashboard →</a></div>
-    </div>
-    <div class="week4-card mandatory">
-      <div class="week4-day">Fri &nbsp;·&nbsp; Mandatory</div>
-      <div class="week4-check">✓</div>
-      <div class="week4-title">Your AI April Portfolio</div>
-      <div class="week4-note">You're looking at it</div>
-    </div>
+    <div class="week4-card done"><div class="week4-day">Mon &nbsp;·&nbsp; Optional</div><div class="week4-check">✓</div><div class="week4-title">Learn GitHub</div><div class="week4-note">Repos, commits, push and pull — in place by Week 2</div></div>
+    <div class="week4-card done"><div class="week4-day">Tue &nbsp;·&nbsp; Optional</div><div class="week4-check">✓</div><div class="week4-title">Learn GitHub Pages</div><div class="week4-note">Static site hosting — live by Week 2</div></div>
+    <div class="week4-card done"><div class="week4-day">Wed &nbsp;·&nbsp; Optional</div><div class="week4-check">✓</div><div class="week4-title">Set Up Your GitHub</div><div class="week4-note">github.com/MKBourgeois/portfolio</div></div>
+    <div class="week4-card done"><div class="week4-day">Thu &nbsp;·&nbsp; Optional</div><div class="week4-check">✓</div><div class="week4-title">Go Live</div><div class="week4-note"><a href="https://teamdashboard-415.streamlit.app/" target="_blank">Live dashboard →</a></div></div>
+    <div class="week4-card mandatory"><div class="week4-day">Fri &nbsp;·&nbsp; Mandatory</div><div class="week4-check">✓</div><div class="week4-title">Your AI April Portfolio</div><div class="week4-note">You're looking at it</div></div>
   </div>
 
   <div class="pullquote" style="margin-top:2px;margin-bottom:2px;">
@@ -320,7 +308,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
     <div class="pullquote-attr">Opening screen &nbsp;·&nbsp; Partner Readiness Simulation</div>
   </div>
 
-  <div class="section-rule"><span class="section-rule-label">The Certification Path &nbsp;·&nbsp; University of Texas at Austin McCombs School of Business</span><div class="section-rule-line"></div></div>
+  <div class="cert-section-header" style="margin-top:56px;">
+    <div class="cert-section-overline">Certification Path</div>
+    <div class="cert-section-title">University of Texas at Austin<br>McCombs School of Business</div>
+    <div class="cert-section-subtitle">Post Graduate Program in Generative AI for Business Applications &nbsp;·&nbsp; January–April 2026</div>
+    <div class="cert-thesis">
+      <div class="cert-thesis-text">The AI April builds show what's possible in hours with the right tools. The certification program shows what it takes to understand why they work — and when they don't. Both are part of the same story.</div>
+    </div>
+  </div>
 
   <div class="cert-context">
     <div class="cert-context-headline">Why this program — and why it matters here</div>
@@ -332,14 +327,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
   </div>
 
   <div class="capstone-grid">
-    <div class="capstone-card">
+    <div class="capstone-card first">
       <div class="capstone-label">Capstone &nbsp;·&nbsp; Course 1 &nbsp;·&nbsp; Graded</div>
       <div class="capstone-headline">Stock Market News Sentiment Analysis</div>
-      <div class="capstone-deck">Compared Word2Vec vs. Sentence Transformer embeddings across Random Forest and Neural Network classifiers. Selected best model based on F1 score and accuracy. Presented findings as an executive briefing.</div>
-      <div class="capstone-result">
-        <div class="capstone-result-num">A+</div>
-        <div class="capstone-result-label">Final grade<br>Generative AI Foundations</div>
-      </div>
+      <div class="capstone-deck">Compared Word2Vec vs. Sentence Transformer embeddings across Random Forest and Neural Network classifiers. Selected best model on F1 score and accuracy. Presented as an executive briefing.</div>
+      <div class="capstone-result"><div class="capstone-result-num">A+</div><div class="capstone-result-label">Final grade<br>Generative AI Foundations</div></div>
       <div class="capstone-metrics">
         <div class="capstone-metric"><div class="capstone-metric-val">75.8%</div><div class="capstone-metric-label">Best model accuracy</div></div>
         <div class="capstone-metric"><div class="capstone-metric-val">0.759</div><div class="capstone-metric-label">F1 score</div></div>
@@ -351,11 +343,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
     <div class="capstone-card second">
       <div class="capstone-label">Capstone &nbsp;·&nbsp; Course 2 &nbsp;·&nbsp; Graded</div>
       <div class="capstone-headline">Medical Assistant (RAG)</div>
-      <div class="capstone-deck">Built and evaluated three AI pipelines — Baseline LLM, Prompt Engineering, and RAG — against the 4,000-page Merck Manual. Implemented LLM-as-a-judge evaluation measuring groundedness and relevance.</div>
-      <div class="capstone-result">
-        <div class="capstone-result-num">A+</div>
-        <div class="capstone-result-label">Final grade<br>Business Applications with LLMs</div>
-      </div>
+      <div class="capstone-deck">Built and evaluated three AI pipelines — Baseline LLM, Prompt Engineering, and RAG — against the 4,000-page Merck Manual. LLM-as-a-judge evaluation measuring groundedness and relevance.</div>
+      <div class="capstone-result"><div class="capstone-result-num">A+</div><div class="capstone-result-label">Final grade<br>Business Applications with LLMs</div></div>
       <div class="capstone-metrics">
         <div class="capstone-metric"><div class="capstone-metric-val">4,675</div><div class="capstone-metric-label">Document chunks</div></div>
         <div class="capstone-metric"><div class="capstone-metric-val">4,000+</div><div class="capstone-metric-label">Pages indexed</div></div>
@@ -367,66 +356,57 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
   </div>
 
   <div class="course-section" style="margin-top:2px;">
-    <div class="course-header">
-      <div class="course-header-top">
-        <div class="course-title">Course 1 &nbsp;·&nbsp; Generative AI Foundations</div>
-        <div class="course-status">Complete &nbsp;·&nbsp; 8 Projects</div>
-      </div>
+    <div class="course-header c1">
+      <div class="course-header-top"><div class="course-title">Course 1 &nbsp;·&nbsp; Generative AI Foundations</div><div class="course-status">Complete &nbsp;·&nbsp; 8 Projects</div></div>
       <div class="course-skills">Python &nbsp;·&nbsp; Google Colab &nbsp;·&nbsp; Machine learning, deep learning, NLP, and transformer-based models — built, trained, and evaluated on real business datasets</div>
     </div>
     <div class="project-grid">
-      <div class="project-card"><div class="proj-num">01</div><div class="proj-title">Health Insurance Premium Prediction</div><div class="proj-desc">Predicted insurance charges using linear regression on age, BMI, and smoking status.</div><div class="proj-result">Model evaluated on MSE &amp; R²</div><div class="proj-tech">Python &nbsp;·&nbsp; Linear Regression &nbsp;·&nbsp; Scikit-learn</div></div>
-      <div class="project-card"><div class="proj-num">02</div><div class="proj-title">Customer Churn Prediction</div><div class="proj-desc">ML classifier identifying at-risk bank customers across 10,127 records.</div><div class="proj-result">Classification with precision/recall evaluation</div><div class="proj-tech">Python &nbsp;·&nbsp; ML Classification &nbsp;·&nbsp; Pandas</div></div>
-      <div class="project-card"><div class="proj-num">03</div><div class="proj-title">Credit Card Fraud Detection</div><div class="proj-desc">Deep learning binary classifier on transactional behavior data.</div><div class="proj-result">Real-time fraud detection pipeline</div><div class="proj-tech">Python &nbsp;·&nbsp; Deep Learning &nbsp;·&nbsp; Neural Networks</div></div>
-      <div class="project-card"><div class="proj-num">04</div><div class="proj-title">COVID-19 Image Classification</div><div class="proj-desc">CNN trained on chest X-ray images to detect COVID-19 vs. normal.</div><div class="proj-result">Binary image classifier on numpy arrays</div><div class="proj-tech">Python &nbsp;·&nbsp; CNN &nbsp;·&nbsp; Image Processing</div></div>
-      <div class="project-card"><div class="proj-num">05</div><div class="proj-title">Product Reviews Sentiment Analysis</div><div class="proj-desc">NLP classifier categorizing reviews as positive, neutral, or negative.</div><div class="proj-result">Multi-class text classification</div><div class="proj-tech">Python &nbsp;·&nbsp; NLP &nbsp;·&nbsp; Text Classification</div></div>
-      <div class="project-card"><div class="proj-num">06</div><div class="proj-title">Movie Recommendation System</div><div class="proj-desc">Recommendation engine using semantic embeddings on 11 months of viewing behavior.</div><div class="proj-result">Evaluated against historical ground truth</div><div class="proj-tech">Python &nbsp;·&nbsp; Embeddings &nbsp;·&nbsp; Similarity Search</div></div>
-      <div class="project-card"><div class="proj-num">07</div><div class="proj-title">Kartify Order Query ChatBot</div><div class="proj-desc">Agentic AI chatbot querying structured order data to resolve customer support requests.</div><div class="proj-result">End-to-end agentic NLP system</div><div class="proj-tech">Python &nbsp;·&nbsp; GenAI &nbsp;·&nbsp; Structured Data</div></div>
-      <div class="project-card capstone-proj"><div class="proj-num">08</div><div class="proj-title">Stock Market News Sentiment Analysis</div><div class="proj-desc">Compared 4 model/embedding combinations. Neural Network + Sentence Transformers achieved 75.8% accuracy.</div><div class="proj-result">Best F1: 0.759 &nbsp;·&nbsp; 80/20 train-test split</div><div class="proj-tech">Python &nbsp;·&nbsp; Word2Vec &nbsp;·&nbsp; Sentence Transformers</div><span class="proj-badge cap">Capstone &nbsp;·&nbsp; A+</span></div>
+      <div class="project-card"><div class="proj-num">01</div><div class="proj-title">Health Insurance Premium Prediction</div><div class="proj-desc">Helps insurers set risk-based pricing by predicting charges from age, BMI, and smoking status.</div><div class="proj-result">Evaluated on MSE &amp; R²</div><div class="proj-tech">Python · Linear Regression · Scikit-learn</div></div>
+      <div class="project-card"><div class="proj-num">02</div><div class="proj-title">Customer Churn Prediction</div><div class="proj-desc">Identifies which bank customers are at risk of leaving, enabling proactive retention across 10,127 records.</div><div class="proj-result">Precision/recall evaluation</div><div class="proj-tech">Python · ML Classification · Pandas</div></div>
+      <div class="project-card"><div class="proj-num">03</div><div class="proj-title">Credit Card Fraud Detection</div><div class="proj-desc">Flags fraudulent transactions in real time using behavioral patterns — reducing financial exposure at scale.</div><div class="proj-result">Real-time fraud detection pipeline</div><div class="proj-tech">Python · Deep Learning · Neural Networks</div></div>
+      <div class="project-card"><div class="proj-num">04</div><div class="proj-title">COVID-19 Image Classification</div><div class="proj-desc">Accelerates clinical triage by detecting COVID-19 from chest X-rays — reducing dependency on slow PCR testing.</div><div class="proj-result">Binary image classifier on numpy arrays</div><div class="proj-tech">Python · CNN · Image Processing</div></div>
+      <div class="project-card"><div class="proj-num">05</div><div class="proj-title">Product Reviews Sentiment Analysis</div><div class="proj-desc">Scales customer feedback analysis for a global retailer — replacing manual review with automated sentiment classification.</div><div class="proj-result">Multi-class text classification</div><div class="proj-tech">Python · NLP · Text Classification</div></div>
+      <div class="project-card"><div class="proj-num">06</div><div class="proj-title">Movie Recommendation System</div><div class="proj-desc">Improves content discovery for an OTT platform whose users were ignoring algorithmic suggestions in favor of manual search.</div><div class="proj-result">Evaluated against historical ground truth</div><div class="proj-tech">Python · Embeddings · Similarity Search</div></div>
+      <div class="project-card"><div class="proj-num">07</div><div class="proj-title">Kartify Order Query ChatBot</div><div class="proj-desc">Resolves order status, shipping, and returns queries autonomously — reducing support team load for a growing e-commerce platform.</div><div class="proj-result">End-to-end agentic NLP system</div><div class="proj-tech">Python · GenAI · Structured Data</div></div>
+      <div class="project-card capstone-proj"><div class="proj-num">08</div><div class="proj-title">Stock Market News Sentiment Analysis</div><div class="proj-desc">Helps investment firms interpret market perception at scale — automating news sentiment to support faster, better-informed trading decisions.</div><div class="proj-result">Best F1: 0.759 · 75.8% accuracy</div><div class="proj-tech">Python · Word2Vec · Sentence Transformers</div><span class="proj-badge cap">Capstone · A+</span></div>
     </div>
   </div>
 
   <div class="course-section" style="margin-top:2px;">
     <div class="course-header c2">
-      <div class="course-header-top">
-        <div class="course-title">Course 2 &nbsp;·&nbsp; Business Applications with LLMs</div>
-        <div class="course-status">Complete &nbsp;·&nbsp; 7 Projects</div>
-      </div>
+      <div class="course-header-top"><div class="course-title">Course 2 &nbsp;·&nbsp; Business Applications with LLMs</div><div class="course-status">Complete &nbsp;·&nbsp; 7 Projects</div></div>
       <div class="course-skills">Python &nbsp;·&nbsp; Google Colab &nbsp;·&nbsp; LLM integration, prompt engineering, and full RAG pipelines — applied to summarization, Q&amp;A, and multi-class classification tasks</div>
     </div>
     <div class="project-grid">
-      <div class="project-card"><div class="proj-num">09</div><div class="proj-title">Smart Research Assistant</div><div class="proj-desc">LLM system summarizing technical articles or answering document-based questions.</div><div class="proj-result">Summarization + Q&amp;A pipeline</div><div class="proj-tech">Python &nbsp;·&nbsp; LLM &nbsp;·&nbsp; Prompt Engineering</div></div>
-      <div class="project-card"><div class="proj-num">10</div><div class="proj-title">Airline Customer Sentiment Analysis</div><div class="proj-desc">LLM-based classifier on Twitter data triggered by a 50% spike in airline mentions.</div><div class="proj-result">3-class sentiment on social media text</div><div class="proj-tech">Python &nbsp;·&nbsp; LLM &nbsp;·&nbsp; NLP</div></div>
-      <div class="project-card"><div class="proj-num">11</div><div class="proj-title">Support Ticket Categorization</div><div class="proj-desc">Single prompt-engineered pipeline that classifies, tags, prioritizes, and auto-responds.</div><div class="proj-result">4 tasks in one LLM call</div><div class="proj-tech">Python &nbsp;·&nbsp; Prompt Engineering &nbsp;·&nbsp; LLM</div></div>
-      <div class="project-card"><div class="proj-num">12</div><div class="proj-title">Restaurant Review Analysis</div><div class="proj-desc">Aspect-level sentiment across food, service, and ambience — pure prompt engineering, no RAG.</div><div class="proj-result">3-tier structured output from unstructured text</div><div class="proj-tech">Python &nbsp;·&nbsp; Prompt Engineering &nbsp;·&nbsp; ABSA</div></div>
-      <div class="project-card"><div class="proj-num">13</div><div class="proj-title">LLM-Powered Research Assistant</div><div class="proj-desc">RAG pipeline querying 4 peer-reviewed PDFs on prompt engineering via natural language.</div><div class="proj-result">Document chunking + vector retrieval + generation</div><div class="proj-tech">Python &nbsp;·&nbsp; RAG &nbsp;·&nbsp; Vector Embeddings</div></div>
-      <div class="project-card"><div class="proj-num">14</div><div class="proj-title">Apple HBR Document Q&A</div><div class="proj-desc">RAG system letting analysts query an 11-page HBR report in natural language.</div><div class="proj-result">Semantic search + grounded generation</div><div class="proj-tech">Python &nbsp;·&nbsp; RAG &nbsp;·&nbsp; Semantic Search</div></div>
-      <div class="project-card capstone-proj" style="grid-column:span 2;"><div class="proj-num">15</div><div class="proj-title">Medical Assistant (RAG)</div><div class="proj-desc">Built 3 AI pipelines against the Merck Manual. Chunked 4,675 passages, embedded with OpenAI (1,536 dimensions), stored in ChromaDB, retrieved top-5 via similarity search. Evaluated all approaches with LLM-as-a-judge on groundedness and relevance.</div><div class="proj-result">RAG outperformed baseline LLM and prompt engineering on groundedness</div><div class="proj-tech">Python &nbsp;·&nbsp; RAG &nbsp;·&nbsp; ChromaDB &nbsp;·&nbsp; OpenAI Embeddings &nbsp;·&nbsp; LLM-as-a-Judge</div><span class="proj-badge cap">Capstone &nbsp;·&nbsp; A+</span></div>
+      <div class="project-card"><div class="proj-num">09</div><div class="proj-title">Smart Research Assistant</div><div class="proj-desc">Cuts research time for tech teams by summarizing articles and answering specific document-based questions on demand.</div><div class="proj-result">Summarization + Q&amp;A pipeline</div><div class="proj-tech">Python · LLM · Prompt Engineering</div></div>
+      <div class="project-card"><div class="proj-num">10</div><div class="proj-title">Airline Customer Sentiment Analysis</div><div class="proj-desc">Built after a 50% spike in Twitter mentions made manual monitoring unsustainable — auto-classifies passenger feedback at volume.</div><div class="proj-result">3-class sentiment on social media text</div><div class="proj-tech">Python · LLM · NLP</div></div>
+      <div class="project-card"><div class="proj-num">11</div><div class="proj-title">Support Ticket Categorization</div><div class="proj-desc">Replaces manual triage with a single LLM call that classifies, tags, prioritizes, and auto-responds to support tickets simultaneously.</div><div class="proj-result">4 tasks in one LLM call</div><div class="proj-tech">Python · Prompt Engineering · LLM</div></div>
+      <div class="project-card"><div class="proj-num">12</div><div class="proj-title">Restaurant Review Analysis</div><div class="proj-desc">Gives a food aggregator granular insight into food, service, and ambience — extracted from unstructured reviews using prompt engineering alone.</div><div class="proj-result">3-tier structured output from text</div><div class="proj-tech">Python · Prompt Engineering · ABSA</div></div>
+      <div class="project-card"><div class="proj-num">13</div><div class="proj-title">LLM-Powered Research Assistant</div><div class="proj-desc">Lets researchers query dense academic PDFs in plain language — no more reading entire papers to find one relevant finding.</div><div class="proj-result">Chunking + vector retrieval + generation</div><div class="proj-tech">Python · RAG · Vector Embeddings</div></div>
+      <div class="project-card"><div class="proj-num">14</div><div class="proj-title">Apple HBR Document Q&amp;A</div><div class="proj-desc">Enables a VC analyst to extract strategic insights from an 11-page HBR report in seconds — without reading the whole document.</div><div class="proj-result">Semantic search + grounded generation</div><div class="proj-tech">Python · RAG · Semantic Search</div></div>
+      <div class="project-card capstone-proj" style="grid-column:span 2;"><div class="proj-num">15</div><div class="proj-title">Medical Assistant (RAG)</div><div class="proj-desc">Enables healthcare professionals to query 4,000+ pages of clinical reference material in natural language — reducing time to accurate, grounded answers in high-stakes environments. Built 3 AI pipelines and evaluated each with LLM-as-a-judge.</div><div class="proj-result">RAG outperformed baseline LLM and prompt engineering on groundedness</div><div class="proj-tech">Python · RAG · ChromaDB · OpenAI Embeddings · LLM-as-a-Judge</div><span class="proj-badge cap">Capstone · A+</span></div>
     </div>
   </div>
 
   <div class="course-section" style="margin-top:2px;">
     <div class="course-header c3">
-      <div class="course-header-top">
-        <div class="course-title">Course 3 &nbsp;·&nbsp; Responsible Generative AI Solutions</div>
-        <div class="course-status">In Progress &nbsp;·&nbsp; 7 Projects</div>
-      </div>
+      <div class="course-header-top"><div class="course-title">Course 3 &nbsp;·&nbsp; Responsible Generative AI Solutions</div><div class="course-status">In Progress &nbsp;·&nbsp; 7 Projects</div></div>
       <div class="course-skills">Python &nbsp;·&nbsp; Google Colab &nbsp;·&nbsp; LLM fine-tuning, agentic AI workflows with LangChain, and responsible AI — guardrails, bias mitigation, and real-world deployment considerations</div>
     </div>
     <div class="project-grid">
-      <div class="project-card"><div class="proj-num">16</div><div class="proj-title">Automated Quality Classification</div><div class="proj-desc">Fine-tuned an LLM on Stack Overflow data to classify question quality at scale.</div><div class="proj-result">PEFT fine-tuning on domain-specific data</div><div class="proj-tech">Python &nbsp;·&nbsp; LLM Fine-Tuning &nbsp;·&nbsp; PEFT</div></div>
-      <div class="project-card"><div class="proj-num">17</div><div class="proj-title">Medical Conversation Summarizer</div><div class="proj-desc">Fine-tuned model generating structured clinical notes from doctor-patient transcripts.</div><div class="proj-result">Seq2seq fine-tuning on medical dialogue</div><div class="proj-tech">Python &nbsp;·&nbsp; Fine-Tuning &nbsp;·&nbsp; Summarization</div></div>
-      <div class="project-card"><div class="proj-num">18</div><div class="proj-title">NewsFindr Discovery Agent</div><div class="proj-desc">Agentic AI expanding user interests into queries, retrieving news, generating summaries.</div><div class="proj-result">Multi-step autonomous agent workflow</div><div class="proj-tech">Python &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; Agentic AI</div></div>
-      <div class="project-card"><div class="proj-num">19</div><div class="proj-title">Greatglobe Logistics Assistant</div><div class="proj-desc">Multi-tool agent bridging SQL database queries and live web compliance research.</div><div class="proj-result">SQL tool + web tool in one agent</div><div class="proj-tech">Python &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; SQL Agent</div></div>
-      <div class="project-card"><div class="proj-num">20</div><div class="proj-title">ClaimAudit Healthcare Chatbot</div><div class="proj-desc">NL2SQL agent with memory and guardrails — blocks destructive queries and PII requests.</div><div class="proj-result">Responsible agentic AI with tested guardrails</div><div class="proj-tech">Python &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; NL2SQL &nbsp;·&nbsp; Guardrails</div></div>
-      <div class="project-card"><div class="proj-num">21</div><div class="proj-title">NewsFindr Agent v2</div><div class="proj-desc">Enhanced iteration adding input guardrails — v1 capability plus responsible AI safety layer.</div><div class="proj-result">Before/after responsible AI comparison</div><div class="proj-tech">Python &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; Input Guardrails</div></div>
-      <div class="project-card capstone-proj inprogress" style="grid-column:span 2;"><div class="proj-num">22</div><div class="proj-title">FoodHub Chatbot &nbsp;·&nbsp; Program Final Capstone</div><div class="proj-desc">Agentic chatbot connecting to a live order database via SQL agent. Input and output guardrails, human escalation logic, and customer-friendly NLP. Synthesizes fine-tuning, agents, and responsible AI in one production-realistic system.</div><div class="proj-result">In progress — final program deliverable</div><div class="proj-tech">Python &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; SQL Agent &nbsp;·&nbsp; Input + Output Guardrails</div><span class="proj-badge prog">In Progress &nbsp;·&nbsp; Final Capstone</span></div>
+      <div class="project-card"><div class="proj-num">16</div><div class="proj-title">Automated Quality Classification</div><div class="proj-desc">Reduces manual moderation burden on knowledge platforms by fine-tuning an LLM to classify question quality automatically.</div><div class="proj-result">PEFT fine-tuning on domain-specific data</div><div class="proj-tech">Python · LLM Fine-Tuning · PEFT</div></div>
+      <div class="project-card"><div class="proj-num">17</div><div class="proj-title">Medical Conversation Summarizer</div><div class="proj-desc">Cuts physician documentation time by generating structured clinical notes directly from doctor-patient conversations.</div><div class="proj-result">Seq2seq fine-tuning on medical dialogue</div><div class="proj-tech">Python · Fine-Tuning · Summarization</div></div>
+      <div class="project-card"><div class="proj-num">18</div><div class="proj-title">NewsFindr Discovery Agent</div><div class="proj-desc">Delivers personalized, credible news to users overwhelmed by generic feeds — using an agentic AI that retrieves and summarizes in real time.</div><div class="proj-result">Multi-step autonomous agent workflow</div><div class="proj-tech">Python · LangChain · Agentic AI</div></div>
+      <div class="project-card"><div class="proj-num">19</div><div class="proj-title">Greatglobe Logistics Assistant</div><div class="proj-desc">Streamlines trade compliance for a global supply chain company by connecting internal product data to live import/export requirements in one agent.</div><div class="proj-result">SQL tool + web tool in one agent</div><div class="proj-tech">Python · LangChain · SQL Agent</div></div>
+      <div class="project-card"><div class="proj-num">20</div><div class="proj-title">ClaimAudit Healthcare Chatbot</div><div class="proj-desc">Empowers non-technical audit professionals to query claims databases in plain language — with guardrails blocking destructive or privacy-violating inputs.</div><div class="proj-result">Responsible agentic AI with tested guardrails</div><div class="proj-tech">Python · LangChain · NL2SQL · Guardrails</div></div>
+      <div class="project-card"><div class="proj-num">21</div><div class="proj-title">NewsFindr Agent v2</div><div class="proj-desc">Adds a responsible AI safety layer to the original NewsFindr agent — demonstrating what changes, and what improves, when guardrails are applied.</div><div class="proj-result">Before/after responsible AI comparison</div><div class="proj-tech">Python · LangChain · Input Guardrails</div></div>
+      <div class="project-card capstone-proj inprogress" style="grid-column:span 2;"><div class="proj-num">22</div><div class="proj-title">FoodHub Chatbot &nbsp;·&nbsp; Program Final Capstone</div><div class="proj-desc">Replaces manual customer support for a food delivery platform with an agentic AI that handles order status, cancellations, and escalations — safely, in real time, with full guardrail coverage. Synthesizes all three courses in one production-realistic system.</div><div class="proj-result">In progress — final program deliverable</div><div class="proj-tech">Python · LangChain · SQL Agent · Input + Output Guardrails</div><span class="proj-badge prog">In Progress · Final Capstone</span></div>
     </div>
   </div>
 
   <div class="inprogress-callout" style="margin-top:2px;">
     <div class="inprogress-icon">→</div>
-    <div class="inprogress-content">
+    <div>
       <div class="inprogress-label">Coming Soon &nbsp;·&nbsp; Program Final Deliverable</div>
       <div class="inprogress-title">FoodHub Chatbot Capstone</div>
       <div class="inprogress-desc">The final capstone combines SQL agents, agentic workflows, input/output guardrails, responsible AI, and customer-facing NLP in a single production-realistic food delivery support system. Completion expected April 2026 — closing out the University of Texas at Austin McCombs certification.</div>
@@ -468,12 +448,5 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
   </div>
 </footer>
 
-<script>
-document.querySelectorAll('.tool-pill').forEach(p=>{
-  if(p.closest('.dark-card'))return;
-  p.addEventListener('mouseenter',()=>{p.style.background='#0e0e0e';p.style.color='#ffffff'});
-  p.addEventListener('mouseleave',()=>{p.style.background='';p.style.color=''});
-});
-</script>
 </body>
 </html>
